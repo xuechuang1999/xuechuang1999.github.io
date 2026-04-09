@@ -28,7 +28,7 @@
 <meta property="og:description" content="Density Functional Theory (DFT)Density Functional Theory (DFT) is a quantum mechanical modeling method that determines the properties of a many-electron system by using the electron density instead of">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2026-04-09T14:42:44.000Z">
-<meta property="article:modified_time" content="2026-04-09T14:46:39.642Z">
+<meta property="article:modified_time" content="2026-04-09T15:02:29.591Z">
 <meta property="article:author" content="Chuang Xue">
 <meta property="article:tag" content="Computational Chemistry">
 <meta property="article:tag" content="DFT">
@@ -67,6 +67,12 @@
   
 
 
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
 
 
 
@@ -204,7 +210,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2026-04-09 16:42:44 / Modified: 16:46:39" itemprop="dateCreated datePublished" datetime="2026-04-09T16:42:44+02:00">2026-04-09</time>
+      <time title="Created: 2026-04-09 16:42:44 / Modified: 17:02:29" itemprop="dateCreated datePublished" datetime="2026-04-09T16:42:44+02:00">2026-04-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -237,8 +243,7 @@
 <li><strong>Variational Principle</strong>: There exists a functional for the energy $E[\rho]$ such that the exact ground-state energy of the system is the global minimum value of this functional.</li>
 </ol>
 <h2 id="3-From-Theory-to-Tool-The-Kohn-Sham-Equations"><a href="#3-From-Theory-to-Tool-The-Kohn-Sham-Equations" class="headerlink" title="3. From Theory to Tool: The Kohn-Sham Equations"></a>3. From Theory to Tool: The Kohn-Sham Equations</h2><p>While the HK theorems prove that a solution exists, they don’t tell us how to find it. <strong>Kohn and Sham</strong> introduced a method to map the complex interacting system onto a fictitious “non-interacting” system, leading to the KS equations:</p>
-<p>$$[-\frac{1}{2}\nabla^2 + V_{ext}(r) + V_H(r) + V_{xc}(r)]\psi_i(r) &#x3D; \epsilon_i\psi_i(r)$$</p>
-<p>The term $V_{xc}(r)$ (Exchange-Correlation potential) is the “heart” of DFT. It accounts for all the complex many-body effects, and its approximation is where the real science (and art) lies.</p>
+<script type="math/tex; mode=display">[-\frac{1}{2}\nabla^2 + V_{ext}(r) + V_H(r) + V_{xc}(r)]\psi_i(r) = \epsilon_i\psi_i(r)</script><p>The term $V_{xc}(r)$ (Exchange-Correlation potential) is the “heart” of DFT. It accounts for all the complex many-body effects, and its approximation is where the real science (and art) lies.</p>
 <h2 id="4-Real-World-Applications"><a href="#4-Real-World-Applications" class="headerlink" title="4. Real-World Applications"></a>4. Real-World Applications</h2><p>Today, DFT is the most widely used method in materials science and computational chemistry for:</p>
 <ul>
 <li><strong>Structural Prediction</strong>: Finding the most stable geometry of a crystal or molecule.</li>
