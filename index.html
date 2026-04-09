@@ -63,7 +63,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js" defer></script>
 
 
@@ -135,7 +135,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -200,7 +200,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2026-04-09 16:42:44 / Modified: 17:05:17" itemprop="dateCreated datePublished" datetime="2026-04-09T16:42:44+02:00">2026-04-09</time>
+      <time title="Created: 2026-04-09 16:42:44 / Modified: 17:37:07" itemprop="dateCreated datePublished" datetime="2026-04-09T16:42:44+02:00">2026-04-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -222,28 +222,76 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Density-Functional-Theory-DFT"><a href="#Density-Functional-Theory-DFT" class="headerlink" title="Density Functional Theory (DFT)"></a>Density Functional Theory (DFT)</h1><p>Density Functional Theory (DFT) is a quantum mechanical modeling method that determines the properties of a many-electron system by using the electron density instead of the complex many-body wave function.</p>
-<h2 id="1-Why-DFT"><a href="#1-Why-DFT" class="headerlink" title="1. Why DFT?"></a>1. Why DFT?</h2><p>In the microscopic world governed by quantum mechanics, the <strong>Schrödinger Equation</strong> is the ultimate authority. However, solving it for multi-electron systems is a nightmare. The wave function $\Psi(r_1, r_2, …, r_n)$ depends on $3N$ variables, making it computationally impossible for even medium-sized molecules.</p>
+          <h1 id="density-functional-theory-dft">Density Functional Theory
+(DFT)</h1>
+<p>Density Functional Theory (DFT) is a quantum mechanical modeling
+method that determines the properties of a many-electron system by using
+the electron density instead of the complex many-body wave function.</p>
+<h2 id="why-dft">1. Why DFT?</h2>
+<p>In the microscopic world governed by quantum mechanics, the
+<strong>Schrödinger Equation</strong> is the ultimate authority.
+However, solving it for multi-electron systems is a nightmare. The wave
+function <span
+class="math inline"><em>Ψ</em>(<em>r</em><sub>1</sub>, <em>r</em><sub>2</sub>, ..., <em>r</em><sub><em>n</em></sub>)</span>
+depends on <span class="math inline">3<em>N</em></span> variables,
+making it computationally impossible for even medium-sized
+molecules.</p>
 <blockquote>
-<p>“To solve the wave function of a complex system is to battle the ‘curse of dimensionality’.”</p>
+<p>“To solve the wave function of a complex system is to battle the
+‘curse of dimensionality’.”</p>
 </blockquote>
-<p><strong>Density Functional Theory (DFT)</strong> changes the game. Instead of focusing on the complicated wave function, it looks at the <strong>electron density</strong> $\rho(r)$. No matter how many electrons are in the system, the density always depends on only three spatial variables.</p>
-<h2 id="2-The-Theoretical-Pillars-Hohenberg-Kohn-Theorems"><a href="#2-The-Theoretical-Pillars-Hohenberg-Kohn-Theorems" class="headerlink" title="2. The Theoretical Pillars: Hohenberg-Kohn Theorems"></a>2. The Theoretical Pillars: Hohenberg-Kohn Theorems</h2><p>The success of DFT rests on two groundbreaking theorems:</p>
-<ol>
-<li><strong>Existence Theorem</strong>: The ground-state properties of a many-electron system are uniquely determined by an electron density that depends on only three spatial coordinates.</li>
-<li><strong>Variational Principle</strong>: There exists a functional for the energy $E[\rho]$ such that the exact ground-state energy of the system is the global minimum value of this functional.</li>
+<p><strong>Density Functional Theory (DFT)</strong> changes the game.
+Instead of focusing on the complicated wave function, it looks at the
+<strong>electron density</strong> <span
+class="math inline"><em>ρ</em>(<em>r</em>)</span>. No matter how many
+electrons are in the system, the density always depends on only three
+spatial variables.</p>
+<h2 id="the-theoretical-pillars-hohenberg-kohn-theorems">2. The
+Theoretical Pillars: Hohenberg-Kohn Theorems</h2>
+<p>The success of DFT rests on two groundbreaking theorems:</p>
+<ol type="1">
+<li><strong>Existence Theorem</strong>: The ground-state properties of a
+many-electron system are uniquely determined by an electron density that
+depends on only three spatial coordinates.</li>
+<li><strong>Variational Principle</strong>: There exists a functional
+for the energy <span class="math inline"><em>E</em>[<em>ρ</em>]</span>
+such that the exact ground-state energy of the system is the global
+minimum value of this functional.</li>
 </ol>
-<h2 id="3-From-Theory-to-Tool-The-Kohn-Sham-Equations"><a href="#3-From-Theory-to-Tool-The-Kohn-Sham-Equations" class="headerlink" title="3. From Theory to Tool: The Kohn-Sham Equations"></a>3. From Theory to Tool: The Kohn-Sham Equations</h2><p>While the HK theorems prove that a solution exists, they don’t tell us how to find it. <strong>Kohn and Sham</strong> introduced a method to map the complex interacting system onto a fictitious “non-interacting” system, leading to the KS equations:</p>
-<script type="math/tex; mode=display">
-[-\frac{1}{2}\nabla^2 + V_{ext}(r) + V_H(r) + V_{xc}(r)]\psi_i(r) = \epsilon_i\psi_i(r)</script><p>The term $V_{xc}(r)$ (Exchange-Correlation potential) is the “heart” of DFT. It accounts for all the complex many-body effects, and its approximation is where the real science (and art) lies.</p>
-<h2 id="4-Real-World-Applications"><a href="#4-Real-World-Applications" class="headerlink" title="4. Real-World Applications"></a>4. Real-World Applications</h2><p>Today, DFT is the most widely used method in materials science and computational chemistry for:</p>
+<h2 id="from-theory-to-tool-the-kohn-sham-equations">3. From Theory to
+Tool: The Kohn-Sham Equations</h2>
+<p>While the HK theorems prove that a solution exists, they don’t tell
+us how to find it. <strong>Kohn and Sham</strong> introduced a method to
+map the complex interacting system onto a fictitious “non-interacting”
+system, leading to the KS equations:</p>
+<p><span class="math display">$$
+[-\frac{1}{2}\nabla^2 + V_{ext}(r) + V_H(r) + V_{xc}(r)]\psi_i(r) =
+\epsilon_i\psi_i(r)
+$$</span></p>
+<p>The term <span
+class="math inline"><em>V</em><sub><em>x</em><em>c</em></sub>(<em>r</em>)</span>
+(Exchange-Correlation potential) is the “heart” of DFT. It accounts for
+all the complex many-body effects, and its approximation is where the
+real science (and art) lies.</p>
+<h2 id="real-world-applications">4. Real-World Applications</h2>
+<p>Today, DFT is the most widely used method in materials science and
+computational chemistry for:</p>
 <ul>
-<li><strong>Structural Prediction</strong>: Finding the most stable geometry of a crystal or molecule.</li>
-<li><strong>Energy Landscapes</strong>: Calculating reaction barriers and adsorption energies.</li>
-<li><strong>Electronic Properties</strong>: Visualizing Band Structures and Density of States (DOS).</li>
+<li><strong>Structural Prediction</strong>: Finding the most stable
+geometry of a crystal or molecule.</li>
+<li><strong>Energy Landscapes</strong>: Calculating reaction barriers
+and adsorption energies.</li>
+<li><strong>Electronic Properties</strong>: Visualizing Band Structures
+and Density of States (DOS).</li>
 </ul>
-<h2 id="5-Conclusion"><a href="#5-Conclusion" class="headerlink" title="5. Conclusion"></a>5. Conclusion</h2><p>By shifting the focus from the wave function to the electron density, DFT exemplifies the philosophy of “simplification without loss of essence.” It remains a cornerstone of modern computational research.</p>
-<hr>
+<h2 id="conclusion">5. Conclusion</h2>
+<p>By shifting the focus from the wave function to the electron density,
+DFT exemplifies the philosophy of “simplification without loss of
+essence.” It remains a cornerstone of modern computational research.</p>
+<p>Here is the energy equation:</p>
+<p><span
+class="math display"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span></p>
+<hr />
 <p><em>Published by cx</em></p>
 
       
@@ -271,7 +319,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2026/04/09/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/04/08/test-formula/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -289,7 +337,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/04/09/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+          <a href="/2026/04/08/test-formula/" class="post-title-link" itemprop="url">test_formula</a>
         </h2>
 
         <div class="post-meta-container">
@@ -300,7 +348,14 @@
       </span>
       <span class="post-meta-item-text">Posted on</span>
 
-      <time title="Created: 2026-04-09 16:37:28" itemprop="dateCreated datePublished" datetime="2026-04-09T16:37:28+02:00">2026-04-09</time>
+      <time title="Created: 2026-04-08 00:00:00" itemprop="dateCreated datePublished" datetime="2026-04-08T00:00:00+02:00">2026-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-04-09 17:45:32" itemprop="dateModified" datetime="2026-04-09T17:45:32+02:00">2026-04-09</time>
     </span>
 
   
@@ -313,15 +368,106 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+          <p><span
+class="math display"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/05/09/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Chuang Xue">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ch Xue">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | Ch Xue">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/05/09/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2025-05-09 17:38:34" itemprop="dateCreated datePublished" datetime="2025-05-09T17:38:34+02:00">2025-05-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2026-04-09 17:45:36" itemprop="dateModified" datetime="2026-04-09T17:45:36+02:00">2026-04-09</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>
