@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>DFT | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Density Functional Theory (DFT)Density Functional Theory (DFT) is a quantum mechanical modeling method that determines the properties of a many-electron system by using the electron density instead of">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DFT">
+<meta property="og:url" content="http://example.com/2026/04/09/DFT/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Density Functional Theory (DFT)Density Functional Theory (DFT) is a quantum mechanical modeling method that determines the properties of a many-electron system by using the electron density instead of">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-04-09T14:42:44.000Z">
+<meta property="article:modified_time" content="2026-04-09T14:46:39.642Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Computational Chemistry">
+<meta property="article:tag" content="DFT">
+<meta property="article:tag" content="Physics">
+<meta property="article:tag" content="Quantum Mechanics">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-DFT" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/04/09/DFT/" class="article-date">
+  <time class="dt-published" datetime="2026-04-09T14:42:44.000Z" itemprop="datePublished">2026-04-09</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Academic-Notes/">Academic Notes</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      DFT
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Density-Functional-Theory-DFT"><a href="#Density-Functional-Theory-DFT" class="headerlink" title="Density Functional Theory (DFT)"></a>Density Functional Theory (DFT)</h1><p>Density Functional Theory (DFT) is a quantum mechanical modeling method that determines the properties of a many-electron system by using the electron density instead of the complex many-body wave function.</p>
+<h2 id="1-Why-DFT"><a href="#1-Why-DFT" class="headerlink" title="1. Why DFT?"></a>1. Why DFT?</h2><p>In the microscopic world governed by quantum mechanics, the <strong>Schrödinger Equation</strong> is the ultimate authority. However, solving it for multi-electron systems is a nightmare. The wave function $\Psi(r_1, r_2, …, r_n)$ depends on $3N$ variables, making it computationally impossible for even medium-sized molecules.</p>
+<blockquote>
+<p>“To solve the wave function of a complex system is to battle the ‘curse of dimensionality’.”</p>
+</blockquote>
+<p><strong>Density Functional Theory (DFT)</strong> changes the game. Instead of focusing on the complicated wave function, it looks at the <strong>electron density</strong> $\rho(r)$. No matter how many electrons are in the system, the density always depends on only three spatial variables.</p>
+<h2 id="2-The-Theoretical-Pillars-Hohenberg-Kohn-Theorems"><a href="#2-The-Theoretical-Pillars-Hohenberg-Kohn-Theorems" class="headerlink" title="2. The Theoretical Pillars: Hohenberg-Kohn Theorems"></a>2. The Theoretical Pillars: Hohenberg-Kohn Theorems</h2><p>The success of DFT rests on two groundbreaking theorems:</p>
+<ol>
+<li><strong>Existence Theorem</strong>: The ground-state properties of a many-electron system are uniquely determined by an electron density that depends on only three spatial coordinates.</li>
+<li><strong>Variational Principle</strong>: There exists a functional for the energy $E[\rho]$ such that the exact ground-state energy of the system is the global minimum value of this functional.</li>
+</ol>
+<h2 id="3-From-Theory-to-Tool-The-Kohn-Sham-Equations"><a href="#3-From-Theory-to-Tool-The-Kohn-Sham-Equations" class="headerlink" title="3. From Theory to Tool: The Kohn-Sham Equations"></a>3. From Theory to Tool: The Kohn-Sham Equations</h2><p>While the HK theorems prove that a solution exists, they don’t tell us how to find it. <strong>Kohn and Sham</strong> introduced a method to map the complex interacting system onto a fictitious “non-interacting” system, leading to the KS equations:</p>
+<p>$$[-\frac{1}{2}\nabla^2 + V_{ext}(r) + V_H(r) + V_{xc}(r)]\psi_i(r) &#x3D; \epsilon_i\psi_i(r)$$</p>
+<p>The term $V_{xc}(r)$ (Exchange-Correlation potential) is the “heart” of DFT. It accounts for all the complex many-body effects, and its approximation is where the real science (and art) lies.</p>
+<h2 id="4-Real-World-Applications"><a href="#4-Real-World-Applications" class="headerlink" title="4. Real-World Applications"></a>4. Real-World Applications</h2><p>Today, DFT is the most widely used method in materials science and computational chemistry for:</p>
+<ul>
+<li><strong>Structural Prediction</strong>: Finding the most stable geometry of a crystal or molecule.</li>
+<li><strong>Energy Landscapes</strong>: Calculating reaction barriers and adsorption energies.</li>
+<li><strong>Electronic Properties</strong>: Visualizing Band Structures and Density of States (DOS).</li>
+</ul>
+<h2 id="5-Conclusion"><a href="#5-Conclusion" class="headerlink" title="5. Conclusion"></a>5. Conclusion</h2><p>By shifting the focus from the wave function to the electron density, DFT exemplifies the philosophy of “simplification without loss of essence.” It remains a cornerstone of modern computational research.</p>
+<hr>
+<p><em>Published by cx</em></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2026/04/09/DFT/" data-id="cuidqK1udh_NjDxW9fAq8NxdN" data-title="DFT" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Computational-Chemistry/" rel="tag">Computational Chemistry</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DFT/" rel="tag">DFT</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Physics/" rel="tag">Physics</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Quantum-Mechanics/" rel="tag">Quantum Mechanics</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2026/04/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Academic-Notes/">Academic Notes</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Computational-Chemistry/" rel="tag">Computational Chemistry</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DFT/" rel="tag">DFT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Physics/" rel="tag">Physics</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Quantum-Mechanics/" rel="tag">Quantum Mechanics</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Computational-Chemistry/" style="font-size: 10px;">Computational Chemistry</a> <a href="/tags/DFT/" style="font-size: 10px;">DFT</a> <a href="/tags/Physics/" style="font-size: 10px;">Physics</a> <a href="/tags/Quantum-Mechanics/" style="font-size: 10px;">Quantum Mechanics</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/04/">April 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/04/09/DFT/">DFT</a>
+          </li>
+        
+          <li>
+            <a href="/2026/04/09/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
