@@ -153,7 +153,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -237,28 +237,73 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Density-Functional-Theory-DFT"><a href="#Density-Functional-Theory-DFT" class="headerlink" title="Density Functional Theory (DFT)"></a>Density Functional Theory (DFT)</h1><p>Density Functional Theory (DFT) is a quantum mechanical modeling method that determines the properties of a many-electron system by using the electron density instead of the complex many-body wave function.</p>
-<h2 id="1-Why-DFT"><a href="#1-Why-DFT" class="headerlink" title="1. Why DFT?"></a>1. Why DFT?</h2><p>In the microscopic world governed by quantum mechanics, the <strong>Schrödinger Equation</strong> is the ultimate authority. However, solving it for multi-electron systems is a nightmare. The wave function $\Psi(r_1, r_2, …, r_n)$ depends on $3N$ variables, making it computationally impossible for even medium-sized molecules.</p>
+          <h1 id="density-functional-theory-dft">Density Functional Theory
+(DFT)</h1>
+<p>Density Functional Theory (DFT) is a quantum mechanical modeling
+method that determines the properties of a many-electron system by using
+the electron density instead of the complex many-body wave function.</p>
+<h2 id="why-dft">1. Why DFT?</h2>
+<p>In the microscopic world governed by quantum mechanics, the
+<strong>Schrödinger Equation</strong> is the ultimate authority.
+However, solving it for multi-electron systems is a nightmare. The wave
+function <span
+class="math inline"><em>Ψ</em>(<em>r</em><sub>1</sub>, <em>r</em><sub>2</sub>, ..., <em>r</em><sub><em>n</em></sub>)</span>
+depends on <span class="math inline">3<em>N</em></span> variables,
+making it computationally impossible for even medium-sized
+molecules.</p>
 <blockquote>
-<p>“To solve the wave function of a complex system is to battle the ‘curse of dimensionality’.”</p>
+<p>“To solve the wave function of a complex system is to battle the
+‘curse of dimensionality’.”</p>
 </blockquote>
-<p><strong>Density Functional Theory (DFT)</strong> changes the game. Instead of focusing on the complicated wave function, it looks at the <strong>electron density</strong> $\rho(r)$. No matter how many electrons are in the system, the density always depends on only three spatial variables.</p>
-<h2 id="2-The-Theoretical-Pillars-Hohenberg-Kohn-Theorems"><a href="#2-The-Theoretical-Pillars-Hohenberg-Kohn-Theorems" class="headerlink" title="2. The Theoretical Pillars: Hohenberg-Kohn Theorems"></a>2. The Theoretical Pillars: Hohenberg-Kohn Theorems</h2><p>The success of DFT rests on two groundbreaking theorems:</p>
-<ol>
-<li><strong>Existence Theorem</strong>: The ground-state properties of a many-electron system are uniquely determined by an electron density that depends on only three spatial coordinates.</li>
-<li><strong>Variational Principle</strong>: There exists a functional for the energy $E[\rho]$ such that the exact ground-state energy of the system is the global minimum value of this functional.</li>
+<p><strong>Density Functional Theory (DFT)</strong> changes the game.
+Instead of focusing on the complicated wave function, it looks at the
+<strong>electron density</strong> <span
+class="math inline"><em>ρ</em>(<em>r</em>)</span>. No matter how many
+electrons are in the system, the density always depends on only three
+spatial variables.</p>
+<h2 id="the-theoretical-pillars-hohenberg-kohn-theorems">2. The
+Theoretical Pillars: Hohenberg-Kohn Theorems</h2>
+<p>The success of DFT rests on two groundbreaking theorems:</p>
+<ol type="1">
+<li><strong>Existence Theorem</strong>: The ground-state properties of a
+many-electron system are uniquely determined by an electron density that
+depends on only three spatial coordinates.</li>
+<li><strong>Variational Principle</strong>: There exists a functional
+for the energy <span class="math inline"><em>E</em>[<em>ρ</em>]</span>
+such that the exact ground-state energy of the system is the global
+minimum value of this functional.</li>
 </ol>
-<h2 id="3-From-Theory-to-Tool-The-Kohn-Sham-Equations"><a href="#3-From-Theory-to-Tool-The-Kohn-Sham-Equations" class="headerlink" title="3. From Theory to Tool: The Kohn-Sham Equations"></a>3. From Theory to Tool: The Kohn-Sham Equations</h2><p>While the HK theorems prove that a solution exists, they don’t tell us how to find it. <strong>Kohn and Sham</strong> introduced a method to map the complex interacting system onto a fictitious “non-interacting” system, leading to the KS equations:</p>
-<script type="math/tex; mode=display">
-[-\frac{1}{2}\nabla^2 + V_{ext}(r) + V_H(r) + V_{xc}(r)]\psi_i(r) = \epsilon_i\psi_i(r)</script><p>The term $V_{xc}(r)$ (Exchange-Correlation potential) is the “heart” of DFT. It accounts for all the complex many-body effects, and its approximation is where the real science (and art) lies.</p>
-<h2 id="4-Real-World-Applications"><a href="#4-Real-World-Applications" class="headerlink" title="4. Real-World Applications"></a>4. Real-World Applications</h2><p>Today, DFT is the most widely used method in materials science and computational chemistry for:</p>
+<h2 id="from-theory-to-tool-the-kohn-sham-equations">3. From Theory to
+Tool: The Kohn-Sham Equations</h2>
+<p>While the HK theorems prove that a solution exists, they don’t tell
+us how to find it. <strong>Kohn and Sham</strong> introduced a method to
+map the complex interacting system onto a fictitious “non-interacting”
+system, leading to the KS equations:</p>
+<p><span class="math display">$$
+[-\frac{1}{2}\nabla^2 + V_{ext}(r) + V_H(r) + V_{xc}(r)]\psi_i(r) =
+\epsilon_i\psi_i(r)
+$$</span></p>
+<p>The term <span
+class="math inline"><em>V</em><sub><em>x</em><em>c</em></sub>(<em>r</em>)</span>
+(Exchange-Correlation potential) is the “heart” of DFT. It accounts for
+all the complex many-body effects, and its approximation is where the
+real science (and art) lies.</p>
+<h2 id="real-world-applications">4. Real-World Applications</h2>
+<p>Today, DFT is the most widely used method in materials science and
+computational chemistry for:</p>
 <ul>
-<li><strong>Structural Prediction</strong>: Finding the most stable geometry of a crystal or molecule.</li>
-<li><strong>Energy Landscapes</strong>: Calculating reaction barriers and adsorption energies.</li>
-<li><strong>Electronic Properties</strong>: Visualizing Band Structures and Density of States (DOS).</li>
+<li><strong>Structural Prediction</strong>: Finding the most stable
+geometry of a crystal or molecule.</li>
+<li><strong>Energy Landscapes</strong>: Calculating reaction barriers
+and adsorption energies.</li>
+<li><strong>Electronic Properties</strong>: Visualizing Band Structures
+and Density of States (DOS).</li>
 </ul>
-<h2 id="5-Conclusion"><a href="#5-Conclusion" class="headerlink" title="5. Conclusion"></a>5. Conclusion</h2><p>By shifting the focus from the wave function to the electron density, DFT exemplifies the philosophy of “simplification without loss of essence.” It remains a cornerstone of modern computational research.</p>
-<hr>
+<h2 id="conclusion">5. Conclusion</h2>
+<p>By shifting the focus from the wave function to the electron density,
+DFT exemplifies the philosophy of “simplification without loss of
+essence.” It remains a cornerstone of modern computational research.</p>
+<hr />
 <p><em>Published by chxue</em></p>
 
       
@@ -344,8 +389,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <script type="math/tex; mode=display">
-E = mc^2</script>
+          <p><span
+class="math display"><em>E</em> = <em>m</em><em>c</em><sup>2</sup></span></p>
+
       
     </div>
 
@@ -429,7 +475,10 @@ E = mc^2</script>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>This is a test post to verify the commit message functionality in Hexo. The commit message should include the current date and time when the post is published, or a custom message if provided through the environment variable <code>msg</code>.</p>
+          <p>This is a test post to verify the commit message functionality in
+Hexo. The commit message should include the current date and time when
+the post is published, or a custom message if provided through the
+environment variable <code>msg</code>.</p>
 
       
     </div>
@@ -492,7 +541,7 @@ E = mc^2</script>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-04-10 11:04:20" itemprop="dateModified" datetime="2026-04-10T11:04:20+02:00">2026-04-10</time>
+      <time title="Modified: 2026-04-10 11:17:44" itemprop="dateModified" datetime="2026-04-10T11:17:44+02:00">2026-04-10</time>
     </span>
 
   
@@ -505,90 +554,155 @@ E = mc^2</script>
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="A-Complete-Guide-to-Building-Your-Personal-Website-with-Hexo-NexT-and-GitHub-Pages"><a href="#A-Complete-Guide-to-Building-Your-Personal-Website-with-Hexo-NexT-and-GitHub-Pages" class="headerlink" title="A Complete Guide to Building Your Personal Website with Hexo, NexT, and GitHub Pages"></a>A Complete Guide to Building Your Personal Website with Hexo, NexT, and GitHub Pages</h1><p>Creating a personal website is a fantastic way to showcase your portfolio, write blogs, and share your knowledge. In this tutorial, we will use <strong>Hexo</strong> (a fast, simple, and powerful blog framework powered by Node.js), the elegant <strong>NexT</strong> theme, and <strong>GitHub Pages</strong> for free hosting.</p>
-<h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><p>Before we begin, ensure you have the following installed on your computer:</p>
-<ol>
-<li><strong>Node.js</strong> (includes npm)</li>
-<li><strong>Git</strong></li>
-<li>A <strong>GitHub Account</strong></li>
-</ol>
-<hr>
-<h2 id="Step-1-Create-a-GitHub-Repository"><a href="#Step-1-Create-a-GitHub-Repository" class="headerlink" title="Step 1: Create a GitHub Repository"></a>Step 1: Create a GitHub Repository</h2><p>First, we need a place to host your website. GitHub Pages requires a specific repository name to work out of the box.</p>
-<ol>
+          <h1
+id="a-complete-guide-to-building-your-personal-website-with-hexo-next-and-github-pages">A
+Complete Guide to Building Your Personal Website with Hexo, NexT, and
+GitHub Pages</h1>
+<p>Creating a personal website is a fantastic way to showcase your
+portfolio, write blogs, and share your knowledge. In this tutorial, we
+will use <strong>Hexo</strong> (a fast, simple, and powerful blog
+framework powered by Node.js), the elegant <strong>NexT</strong> theme,
+and <strong>GitHub Pages</strong> for free hosting.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>Before we begin, ensure you have the following installed on your
+computer: 1. <strong>Node.js</strong> (includes npm) 2.
+<strong>Git</strong> 3. A <strong>GitHub Account</strong></p>
+<hr />
+<h2 id="step-1-create-a-github-repository">Step 1: Create a GitHub
+Repository</h2>
+<p>First, we need a place to host your website. GitHub Pages requires a
+specific repository name to work out of the box.</p>
+<ol type="1">
 <li>Log in to your GitHub account.</li>
-<li>Click the <strong>New</strong> button to create a new repository.</li>
-<li><strong>Repository name:</strong> This is crucial. You MUST name it <code>your-github-username.github.io</code>. (Replace <code>your-github-username</code> with your actual exact username).</li>
+<li>Click the <strong>New</strong> button to create a new
+repository.</li>
+<li><strong>Repository name:</strong> This is crucial. You MUST name it
+<code>your-github-username.github.io</code>. (Replace
+<code>your-github-username</code> with your actual exact username).</li>
 <li>Make the repository <strong>Public</strong>.</li>
 <li>Click <strong>Create repository</strong>.</li>
 </ol>
-<hr>
-<h2 id="Step-2-Install-Hexo-and-Initialize-Your-Site"><a href="#Step-2-Install-Hexo-and-Initialize-Your-Site" class="headerlink" title="Step 2: Install Hexo and Initialize Your Site"></a>Step 2: Install Hexo and Initialize Your Site</h2><p>Now, let’s set up Hexo on your local machine. Open your terminal or command prompt.</p>
-<ol>
-<li><strong>Install Hexo CLI globally:</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
-<li><strong>Initialize your blog directory:</strong><br>Navigate to the folder where you want to keep your website files and run:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
-</li>
+<hr />
+<h2 id="step-2-install-hexo-and-initialize-your-site">Step 2: Install
+Hexo and Initialize Your Site</h2>
+<p>Now, let’s set up Hexo on your local machine. Open your terminal or
+command prompt.</p>
+<ol type="1">
+<li><strong>Install Hexo CLI globally:</strong> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
+<li><strong>Initialize your blog directory:</strong> Navigate to the
+folder where you want to keep your website files and run:
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="Understanding-the-Directory-Structure"><a href="#Understanding-the-Directory-Structure" class="headerlink" title="Understanding the Directory Structure"></a>Understanding the Directory Structure</h3><p>After initialization, your <code>my-blog</code> folder will look like this:</p>
+<h3 id="understanding-the-directory-structure">Understanding the
+Directory Structure</h3>
+<p>After initialization, your <code>my-blog</code> folder will look like
+this:</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">my-blog/</span><br><span class="line">├── _config.yml         &lt;-- ⚠️ Site Configuration File (Hexo Config)</span><br><span class="line">├── package.json        &lt;-- Application data and installed plugins</span><br><span class="line">├── scaffolds/          &lt;-- Templates when creating new posts</span><br><span class="line">├── source/             &lt;-- 📝 Where you write your content (Markdown files)</span><br><span class="line">│   ├── _drafts/</span><br><span class="line">│   └── _posts/         &lt;-- Your blog posts go here</span><br><span class="line">└── themes/             &lt;-- 🎨 Downloaded themes go here</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="Step-3-Install-the-NexT-Theme"><a href="#Step-3-Install-the-NexT-Theme" class="headerlink" title="Step 3: Install the NexT Theme"></a>Step 3: Install the NexT Theme</h2><p>NexT is one of the most popular, clean, and feature-rich themes for Hexo.</p>
-<ol>
-<li>Inside your <code>my-blog</code> directory, download the NexT theme using Git:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-</li>
+<hr />
+<h2 id="step-3-install-the-next-theme">Step 3: Install the NexT
+Theme</h2>
+<p>NexT is one of the most popular, clean, and feature-rich themes for
+Hexo.</p>
+<ol type="1">
+<li>Inside your <code>my-blog</code> directory, download the NexT theme
+using Git: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="⚠️-The-Golden-Rule-Distinguishing-the-Two-config-yml-Files"><a href="#⚠️-The-Golden-Rule-Distinguishing-the-Two-config-yml-Files" class="headerlink" title="⚠️ The Golden Rule: Distinguishing the Two _config.yml Files"></a>⚠️ The Golden Rule: Distinguishing the Two <code>_config.yml</code> Files</h3><p>The most common source of confusion in Hexo is having two main configuration files. You must understand the difference:</p>
-<ol>
-<li><p><strong>The Site Config (Hexo Config):</strong></p>
+<h3 id="the-golden-rule-distinguishing-the-two-_config.yml-files">⚠️ The
+Golden Rule: Distinguishing the Two <code>_config.yml</code> Files</h3>
+<p>The most common source of confusion in Hexo is having two main
+configuration files. You must understand the difference:</p>
+<ol type="1">
+<li><strong>The Site Config (Hexo Config):</strong>
 <ul>
-<li><strong>Location:</strong> <code>my-blog/_config.yml</code> (Root directory)</li>
-<li><strong>Purpose:</strong> Controls site-wide settings like the title, author, URL, language, and deployment settings.</li>
-<li><em>Action:</em> Open this file and change the <code>theme</code> variable:<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># my-blog/_config.yml</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p><strong>The Theme Config (NexT Config):</strong></p>
+<li><strong>Location:</strong> <code>my-blog/_config.yml</code> (Root
+directory)</li>
+<li><strong>Purpose:</strong> Controls site-wide settings like the
+title, author, URL, language, and deployment settings.</li>
+<li><em>Action:</em> Open this file and change the <code>theme</code>
+variable: <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># my-blog/_config.yml</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure></li>
+</ul></li>
+<li><strong>The Theme Config (NexT Config):</strong>
 <ul>
-<li><strong>Location:</strong> <code>my-blog/themes/next/_config.yml</code></li>
-<li><strong>Purpose:</strong> Controls the visual appearance, menu items, sidebars, social links, and integrations (like MathJax for math equations) specifically for the NexT theme.</li>
-</ul>
-</li>
+<li><strong>Location:</strong>
+<code>my-blog/themes/next/_config.yml</code></li>
+<li><strong>Purpose:</strong> Controls the visual appearance, menu
+items, sidebars, social links, and integrations (like MathJax for math
+equations) specifically for the NexT theme.</li>
+</ul></li>
 </ol>
-<hr>
-<h2 id="Step-4-Perfecting-LaTeX-Rendering-Inline-amp-Display-Equations"><a href="#Step-4-Perfecting-LaTeX-Rendering-Inline-amp-Display-Equations" class="headerlink" title="Step 4: Perfecting LaTeX Rendering (Inline &amp; Display Equations)"></a>Step 4: Perfecting LaTeX Rendering (Inline &amp; Display Equations)</h2><p>By default, Hexo’s standard Markdown renderer (<code>hexo-renderer-marked</code>) conflicts with LaTeX syntax (specifically, it treats underscores <code>_</code> as italics, which breaks math subscripts like $X_i$).</p>
-<p>Here is the bulletproof way to fix this and render beautiful math.</p>
-<h3 id="1-Swap-the-Renderer"><a href="#1-Swap-the-Renderer" class="headerlink" title="1. Swap the Renderer"></a>1. Swap the Renderer</h3><p>Uninstall the default renderer and install a math-friendly one (<code>hexo-renderer-kramed</code> is highly recommended for this):</p>
+<hr />
+<h2 id="step-4-perfecting-latex-rendering-inline-display-equations">Step
+4: Perfecting LaTeX Rendering (Inline &amp; Display Equations)</h2>
+<p>By default, Hexo’s standard Markdown renderer
+(<code>hexo-renderer-marked</code>) conflicts with LaTeX syntax
+(specifically, it treats underscores <code>_</code> as italics, which
+breaks math subscripts like <span
+class="math inline"><em>X</em><sub><em>i</em></sub></span>).</p>
+<p>Here is the bulletproof way to fix this and render beautiful
+math.</p>
+<h3 id="swap-the-renderer">1. Swap the Renderer</h3>
+<p>Uninstall the default renderer and install a math-friendly one
+(<code>hexo-renderer-kramed</code> is highly recommended for this):</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-<h3 id="2-Enable-MathJax-in-the-NexT-Config"><a href="#2-Enable-MathJax-in-the-NexT-Config" class="headerlink" title="2. Enable MathJax in the NexT Config"></a>2. Enable MathJax in the NexT Config</h3><p>Open your <strong>Theme Config</strong> (<code>my-blog/themes/next/_config.yml</code>), find the <code>math</code> section, and enable MathJax:</p>
+<h3 id="enable-mathjax-in-the-next-config">2. Enable MathJax in the NexT
+Config</h3>
+<p>Open your <strong>Theme Config</strong>
+(<code>my-blog/themes/next/_config.yml</code>), find the
+<code>math</code> section, and enable MathJax:</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># my-blog/themes/next/_config.yml</span></span><br><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="comment"># Default (true) will load mathjax / katex script on demand.</span></span><br><span class="line">  <span class="comment"># That is it only render those page which has `mathjax: true` in Front-matter.</span></span><br><span class="line">  <span class="attr">every_page:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: mathjax | mhchem</span></span><br><span class="line">    <span class="attr">tags:</span> <span class="string">none</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-Using-LaTeX-in-Your-Posts"><a href="#3-Using-LaTeX-in-Your-Posts" class="headerlink" title="3. Using LaTeX in Your Posts"></a>3. Using LaTeX in Your Posts</h3><p>Because we set <code>every_page: false</code> to save loading times, you must add <code>mathjax: true</code> to the Front-matter (the top section) of any Markdown file where you want to write formulas.</p>
-<p>Create a new post:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My Math Post&quot;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="using-latex-in-your-posts">3. Using LaTeX in Your Posts</h3>
+<p>Because we set <code>every_page: false</code> to save loading times,
+you must add <code>mathjax: true</code> to the Front-matter (the top
+section) of any Markdown file where you want to write formulas.</p>
+<p>Create a new post: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">&quot;My Math Post&quot;</span></span><br></pre></td></tr></table></figure></p>
 <p>Open <code>source/_posts/My-Math-Post.md</code> and write:</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: My Math Post</span><br><span class="line">date: 2026-04-10 10:00:00</span><br><span class="line">tags:</span><br><span class="line"><span class="section">mathjax: true  &lt;-- MUST ADD THIS</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"></span><br><span class="line">Here is an inline equation: $E = mc^2$. It renders perfectly in the flow of text.</span><br><span class="line"></span><br><span class="line">Here is a display equation block:</span><br><span class="line"></span><br><span class="line">$$</span><br><span class="line">f(x) = \int<span class="emphasis">_&#123;-\infty&#125;^\infty \hat&#123;f&#125;(\xi)\,e^&#123;2 \pi i \xi x&#125; \,d\xi</span></span><br><span class="line"><span class="emphasis">$$</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="Step-5-Deploying-to-GitHub-Pages"><a href="#Step-5-Deploying-to-GitHub-Pages" class="headerlink" title="Step 5: Deploying to GitHub Pages"></a>Step 5: Deploying to GitHub Pages</h2><p>You have your site and your math looks great. Let’s push it to the internet.</p>
-<ol>
-<li><p><strong>Install the deployment plugin:</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Configure Deployment:</strong><br>Open your <strong>Site Config</strong> (<code>my-blog/_config.yml</code>), scroll to the very bottom, and modify the <code>deploy</code> section. Add your repository URL:</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># my-blog/_config.yml</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/your-github-username/your-github-username.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span> <span class="comment"># or master, depending on your GitHub default branch</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Deploy!</strong><br>Run the following commands to clean old files, generate the new HTML, and push it to GitHub:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p><em>(Note: You will be prompted to log in to your GitHub account during the deploy step if you haven’t authenticated in your terminal).</em></p>
-</li>
+<hr />
+<h2 id="step-5-deploying-to-github-pages">Step 5: Deploying to GitHub
+Pages</h2>
+<p>You have your site and your math looks great. Let’s push it to the
+internet.</p>
+<ol type="1">
+<li><p><strong>Install the deployment plugin:</strong>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p></li>
+<li><p><strong>Configure Deployment:</strong> Open your <strong>Site
+Config</strong> (<code>my-blog/_config.yml</code>), scroll to the very
+bottom, and modify the <code>deploy</code> section. Add your repository
+URL:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># my-blog/_config.yml</span></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">https://github.com/your-github-username/your-github-username.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span> <span class="comment"># or master, depending on your GitHub default branch</span></span><br></pre></td></tr></table></figure></li>
+<li><p><strong>Deploy!</strong> Run the following commands to clean old
+files, generate the new HTML, and push it to GitHub: <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<em>(Note: You will be prompted to log in to your GitHub account during
+the deploy step if you haven’t authenticated in your
+terminal).</em></p></li>
 </ol>
-<p>Wait a few minutes, visit <code>https://your-github-username.github.io</code>, and your new personal website will be live!</p>
-<hr>
-<h2 id="📌-Hexo-Cheat-Sheet-Common-Commands"><a href="#📌-Hexo-Cheat-Sheet-Common-Commands" class="headerlink" title="📌 Hexo Cheat Sheet: Common Commands"></a>📌 Hexo Cheat Sheet: Common Commands</h2><p>Keep these commands handy as you write and maintain your blog:</p>
+<p>Wait a few minutes, visit
+<code>https://your-github-username.github.io</code>, and your new
+personal website will be live!</p>
+<hr />
+<h2 id="hexo-cheat-sheet-common-commands">📌 Hexo Cheat Sheet: Common
+Commands</h2>
+<p>Keep these commands handy as you write and maintain your blog:</p>
 <ul>
-<li><strong><code>hexo new &quot;Post Title&quot;</code></strong> (or <code>hexo n</code>): Creates a new <code>.md</code> file in <code>source/_posts/</code>.</li>
-<li><strong><code>hexo server</code></strong> (or <code>hexo s</code>): Starts a local server at <code>http://localhost:4000</code> so you can preview your site before publishing.</li>
-<li><strong><code>hexo clean</code></strong>: Deletes the <code>public/</code> and <code>db.json</code> files. Do this if your changes aren’t showing up.</li>
-<li><strong><code>hexo generate</code></strong> (or <code>hexo g</code>): Builds the static HTML files from your Markdown.</li>
-<li><strong><code>hexo deploy</code></strong> (or <code>hexo d</code>): Pushes the generated files to GitHub.</li>
-<li><strong><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></strong>: The holy trinity. Cleans, generates, and deploys all in one go.</li>
-<li><code>hexo deploy --message &quot;Your commit message&quot;</code> (or <code>hexo d -m &quot;Your commit message&quot;</code>): Deploy with a custom commit message.</li>
+<li><strong><code>hexo new "Post Title"</code></strong> (or
+<code>hexo n</code>): Creates a new <code>.md</code> file in
+<code>source/_posts/</code>.</li>
+<li><strong><code>hexo server</code></strong> (or <code>hexo s</code>):
+Starts a local server at <code>http://localhost:4000</code> so you can
+preview your site before publishing.</li>
+<li><strong><code>hexo clean</code></strong>: Deletes the
+<code>public/</code> and <code>db.json</code> files. Do this if your
+changes aren’t showing up.</li>
+<li><strong><code>hexo generate</code></strong> (or
+<code>hexo g</code>): Builds the static HTML files from your
+Markdown.</li>
+<li><strong><code>hexo deploy</code></strong> (or <code>hexo d</code>):
+Pushes the generated files to GitHub.</li>
+<li><strong><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></strong>:
+The holy trinity. Cleans, generates, and deploys all in one go.</li>
+<li><code>hexo deploy --message "Your commit message"</code> (or
+<code>hexo d -m "Your commit message"</code>): Deploy with a custom
+commit message.</li>
 </ul>
 
       
@@ -674,15 +788,29 @@ E = mc^2</script>
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very
+first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for
+more info. If you get any problems when using Hexo, you can find the
+answer in <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
+you can ask me on <a
+target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>
