@@ -20,30 +20,27 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"xuechuang1999.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.27.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="Density Functional Theory (DFT) Density Functional Theory (DFT) is a quantum mechanical modeling method that determines the properties of a many-electron system by using the electron density inste">
+    <meta name="description" content="Here is a brief intro of conda. When you want to use Python or other programming languages, you always need to install some packages for your project. However, sometime your different projects may">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DFT">
-<meta property="og:url" content="http://xuechuang1999.github.io/2026/04/09/DFT/index.html">
+<meta property="og:title" content="What is conda?">
+<meta property="og:url" content="http://xuechuang1999.github.io/2026/04/23/What-is-conda/index.html">
 <meta property="og:site_name" content="Ch Xue">
-<meta property="og:description" content="Density Functional Theory (DFT) Density Functional Theory (DFT) is a quantum mechanical modeling method that determines the properties of a many-electron system by using the electron density inste">
+<meta property="og:description" content="Here is a brief intro of conda. When you want to use Python or other programming languages, you always need to install some packages for your project. However, sometime your different projects may">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2026-04-09T14:42:44.000Z">
-<meta property="article:modified_time" content="2026-04-10T09:40:17.387Z">
+<meta property="article:published_time" content="2026-04-23T15:42:31.000Z">
+<meta property="article:modified_time" content="2026-04-23T15:52:58.753Z">
 <meta property="article:author" content="Chuang Xue">
-<meta property="article:tag" content="Computational Chemistry">
-<meta property="article:tag" content="DFT">
-<meta property="article:tag" content="Physics">
-<meta property="article:tag" content="Quantum Mechanics">
+<meta property="article:tag" content="conda, python">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://xuechuang1999.github.io/2026/04/09/DFT/">
+<link rel="canonical" href="http://xuechuang1999.github.io/2026/04/23/What-is-conda/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://xuechuang1999.github.io/2026/04/09/DFT/","path":"2026/04/09/DFT/","title":"DFT"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://xuechuang1999.github.io/2026/04/23/What-is-conda/","path":"2026/04/23/What-is-conda/","title":"What is conda?"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>DFT | Ch Xue</title>
+<title>What is conda? | Ch Xue</title>
   
 
 
@@ -71,7 +68,7 @@
 
   
 
-  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
 <script src="/js/third-party/math/mathjax.js" defer></script>
 
 
@@ -125,7 +122,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -138,10 +135,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#density-functional-theory-dft"><span class="nav-number">1.</span> <span class="nav-text">Density Functional Theory
-(DFT)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#why-dft"><span class="nav-number">1.1.</span> <span class="nav-text">1. Why DFT?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-theoretical-pillars-hohenberg-kohn-theorems"><span class="nav-number">1.2.</span> <span class="nav-text">2. The
-Theoretical Pillars: Hohenberg-Kohn Theorems</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#from-theory-to-tool-the-kohn-sham-equations"><span class="nav-number">1.3.</span> <span class="nav-text">3. From Theory to
-Tool: The Kohn-Sham Equations</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#real-world-applications"><span class="nav-number">1.4.</span> <span class="nav-text">4. Real-World Applications</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conclusion"><span class="nav-number">1.5.</span> <span class="nav-text">5. Conclusion</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -192,7 +185,7 @@ Tool: The Kohn-Sham Equations</span></a></li><li class="nav-item nav-level-2"><a
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://xuechuang1999.github.io/2026/04/09/DFT/">
+    <link itemprop="mainEntityOfPage" href="http://xuechuang1999.github.io/2026/04/23/What-is-conda/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -205,12 +198,12 @@ Tool: The Kohn-Sham Equations</span></a></li><li class="nav-item nav-level-2"><a
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="DFT | Ch Xue">
+      <meta itemprop="name" content="What is conda? | Ch Xue">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          DFT
+          What is conda?
         </h1>
 
         <div class="post-meta-container">
@@ -220,15 +213,9 @@ Tool: The Kohn-Sham Equations</span></a></li><li class="nav-item nav-level-2"><a
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
+      
 
-      <time title="Created: 2026-04-09 16:42:44" itemprop="dateCreated datePublished" datetime="2026-04-09T16:42:44+02:00">2026-04-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2026-04-10 11:40:17" itemprop="dateModified" datetime="2026-04-10T11:40:17+02:00">2026-04-10</time>
+      <time title="Created: 2026-04-23 17:42:31 / Modified: 17:52:58" itemprop="dateCreated datePublished" datetime="2026-04-23T17:42:31+02:00">2026-04-23</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -236,7 +223,7 @@ Tool: The Kohn-Sham Equations</span></a></li><li class="nav-item nav-level-2"><a
       </span>
       <span class="post-meta-item-text">In</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Academic-Notes/" itemprop="url" rel="index"><span itemprop="name">Academic Notes</span></a>
+          <a href="/categories/tutorial/" itemprop="url" rel="index"><span itemprop="name">tutorial</span></a>
         </span>
     </span>
 
@@ -249,74 +236,41 @@ Tool: The Kohn-Sham Equations</span></a></li><li class="nav-item nav-level-2"><a
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="density-functional-theory-dft">Density Functional Theory
-(DFT)</h1>
-<p>Density Functional Theory (DFT) is a quantum mechanical modeling
-method that determines the properties of a many-electron system by using
-the electron density instead of the complex many-body wave function.</p>
-<h2 id="why-dft">1. Why DFT?</h2>
-<p>In the microscopic world governed by quantum mechanics, the
-<strong>Schrödinger Equation</strong> is the ultimate authority.
-However, solving it for multi-electron systems is a nightmare. The wave
-function <span
-class="math inline"><em>Ψ</em>(<em>r</em><sub>1</sub>, <em>r</em><sub>2</sub>, ..., <em>r</em><sub><em>n</em></sub>)</span>
-depends on <span class="math inline">3<em>N</em></span> variables,
-making it computationally impossible for even medium-sized
-molecules.</p>
-<blockquote>
-<p>“To solve the wave function of a complex system is to battle the
-‘curse of dimensionality’.”</p>
-</blockquote>
-<p><strong>Density Functional Theory (DFT)</strong> changes the game.
-Instead of focusing on the complicated wave function, it looks at the
-<strong>electron density</strong> <span
-class="math inline"><em>ρ</em>(<em>r</em>)</span>. No matter how many
-electrons are in the system, the density always depends on only three
-spatial variables.</p>
-<h2 id="the-theoretical-pillars-hohenberg-kohn-theorems">2. The
-Theoretical Pillars: Hohenberg-Kohn Theorems</h2>
-<p>The success of DFT rests on two groundbreaking theorems:</p>
-<ol type="1">
-<li><strong>Existence Theorem</strong>: The ground-state properties of a
-many-electron system are uniquely determined by an electron density that
-depends on only three spatial coordinates.</li>
-<li><strong>Variational Principle</strong>: There exists a functional
-for the energy <span class="math inline"><em>E</em>[<em>ρ</em>]</span>
-such that the exact ground-state energy of the system is the global
-minimum value of this functional.</li>
-</ol>
-<h2 id="from-theory-to-tool-the-kohn-sham-equations">3. From Theory to
-Tool: The Kohn-Sham Equations</h2>
-<p>While the HK theorems prove that a solution exists, they don’t tell
-us how to find it. <strong>Kohn and Sham</strong> introduced a method to
-map the complex interacting system onto a fictitious “non-interacting”
-system, leading to the KS equations:</p>
-<p><span class="math display">$$
-\left[-\frac{1}{2}\nabla^2 + V_{ext}(r) + V_H(r) +
-V_{xc}(r)\right]\psi_i(r) = \epsilon_i\psi_i(r)
-$$</span></p>
-<p>The term <span
-class="math inline"><em>V</em><sub><em>x</em><em>c</em></sub>(<em>r</em>)</span>
-(Exchange-Correlation potential) is the “heart” of DFT. It accounts for
-all the complex many-body effects, and its approximation is where the
-real science (and art) lies.</p>
-<h2 id="real-world-applications">4. Real-World Applications</h2>
-<p>Today, DFT is the most widely used method in materials science and
-computational chemistry for:</p>
-<ul>
-<li><strong>Structural Prediction</strong>: Finding the most stable
-geometry of a crystal or molecule.</li>
-<li><strong>Energy Landscapes</strong>: Calculating reaction barriers
-and adsorption energies.</li>
-<li><strong>Electronic Properties</strong>: Visualizing Band Structures
-and Density of States (DOS).</li>
-</ul>
-<h2 id="conclusion">5. Conclusion</h2>
-<p>By shifting the focus from the wave function to the electron density,
-DFT exemplifies the philosophy of “simplification without loss of
-essence.” It remains a cornerstone of modern computational research.</p>
-<hr />
-<p><em>Published by chxue</em></p>
+    <div class="post-body" itemprop="articleBody"><p>Here is a brief intro of <code>conda</code>. When you want to use
+Python or other programming languages, you always need to install some
+packages for your project. However, sometime your different projects may
+require different versions of the same package, which will cause
+conflicts.</p>
+<p>Then you will think whether you can create an isolated environment
+for each project, so that you can install different versions of the same
+package in different environments without conflicts. This is where
+<code>conda</code> comes in.</p>
+<p><code>conda</code> is a package manager and environment management
+system that allows you to create and manage isolated environments for
+your projects. It is widely used in the Python community, but it can
+also be used for other programming languages.</p>
+<p><code>conda</code> is a package manager, and the
+<code>anaconda</code> and <code>miniconda</code> are two popular
+distributions of <code>conda</code>. The <code>anaconda</code>
+distribution comes with a lot of pre-installed packages, while the
+<code>miniconda</code> distribution is a minimal version that only
+includes the <code>conda</code> package manager and a few essential
+packages.</p>
+<p>You can download and install <code>conda</code> from the <a
+target="_blank" rel="noopener" href="https://www.anaconda.com/download/success">official website</a>.
+After installing <code>conda</code>, you can create a new environment
+for your project using the following command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name myenv</span><br></pre></td></tr></table></figure>
+<p>This command creates a new environment named <code>myenv</code>.</p>
+<p>You can activate the environment using the following command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate myenv</span><br></pre></td></tr></table></figure>
+<p>After activating the environment, you can install the packages you
+need for your project using the <code>conda install</code> command. For
+example, if you want to install the <code>numpy</code> package, you can
+use the following command:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install numpy</span><br></pre></td></tr></table></figure>
+<p>This command will install the <code>numpy</code> package in the
+<code>myenv</code> environment.</p>
 
     </div>
 
@@ -326,24 +280,18 @@ essence.” It remains a cornerstone of modern computational research.</p>
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/Computational-Chemistry/" rel="tag"># Computational Chemistry</a>
-              <a href="/tags/Physics/" rel="tag"># Physics</a>
-              <a href="/tags/Quantum-Mechanics/" rel="tag"># Quantum Mechanics</a>
-              <a href="/tags/DFT/" rel="tag"># DFT</a>
+              <a href="/tags/conda-python/" rel="tag"># conda, python</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2026/04/08/test-formula/" rel="prev" title="test_formula">
-                  <i class="fa fa-angle-left"></i> test_formula
+                <a href="/2026/04/23/How-to-query-material-info-by-using-mp-api/" rel="prev" title="How to query material info by using mp-api">
+                  <i class="fa fa-angle-left"></i> How to query material info by using mp-api
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2026/04/23/How-to-query-material-info-by-using-mp-api/" rel="next" title="How to query material info by using mp-api">
-                  How to query material info by using mp-api <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
